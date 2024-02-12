@@ -28,11 +28,15 @@ class MyApp extends StatelessWidget {
         builder: (context, state) => const HomePage(),
       ),
       GoRoute(
-        path: '${DetailPage.routeName}/:id',
-        builder: (context, state) => DetailPage(
-          id: state.pathParameters['id'] ?? '',
-        ),
+        path: DetailPage.routeName,
+        builder: (context, state) => const DetailPage(),
       ),
+      // GoRoute(
+      //   path: '${DetailPage.routeName}/:id',
+      //   builder: (context, state) => DetailPage(
+      //     id: state.pathParameters['id'] ?? '',
+      //   ),
+      // ),
     ],
     initialLocation: GetStartedPage.routeName,
     debugLogDiagnostics: true,
@@ -48,7 +52,6 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => NavigationBloc(),
         ),
-       
       ],
       child: MaterialApp.router(
         debugShowMaterialGrid: false,

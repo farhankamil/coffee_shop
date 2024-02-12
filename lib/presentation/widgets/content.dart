@@ -31,7 +31,7 @@ class HomeContentItem extends StatelessWidget {
       //   DetailPage.routeName,
       // );
       // },
-      onTap: () => context.go(DetailPage.routeName),
+      onTap: () => context.push(DetailPage.routeName),
 
       child: Container(
         decoration: BoxDecoration(
